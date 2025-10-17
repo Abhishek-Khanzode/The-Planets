@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+   <div class="main w-full h-full">
+
+      <div class="full z-6 bg-black w-full h-screen  absolute top-[-150%] ">
+         <h1 class="text-2xl  font-bold uppercase absolute top-5 left-3">Planets</h1>
+         <div class="all-links w-[300px]  flex flex-col items-start gap-5 absolute top-30 left-3">
+            <div class="box h-[80px] overflow-hidden">
+               <a href="#" class="text-6xl uppercase">Home</a>
+            </div>
+            <div class="box h-[80px] overflow-hidden">
+               <a href="#" class="text-6xl uppercase">About</a>
+            </div>
+            <div class="box h-[80px] overflow-hidden">
+               <a href="#" class="text-6xl uppercase">Works</a>
+            </div>
+            <div class="box h-[80px] overflow-hidden">
+               <a href="#" class="text-6xl uppercase">Contact</a>
+            </div>
+         </div>
+
+         <h3 class=" close text-1xl uppercase cursor-pointer absolute top-5 right-3">[ / ] Close</h3>
+      </div>
+
+
+      <div class="nav z-5 w-full  px-8 py-2 flex justify-between items-center absolute top-2 left-0">
+         <h1 class="text-2xl  font-bold uppercase">Planets</h1>
+         <div class="links flex justify-center items-center gap-4">
+            <a href="#" class="text-1xl uppercase cursor-pointer">Home</a>
+            <a href="#" class="text-1xl uppercase cursor-pointer">About</a>
+            <a href="#" class="text-1xl uppercase cursor-pointer">Works</a>
+            <a href="#" class="text-1xl uppercase cursor-pointer">COntact</a>
+         </div>
+
+         <h3 class=" menu  text-1xl uppercase cursor-pointer">[ / ] Menu</h3>
+      </div>
+
+
+
+      <div class="header  w-full h-[100vh] overflow-hidden relative">
+         <div
+            class="text z-3 w-full h-[140px] flex justify-center items-center flex-col gap-2 absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div class="box w-full h-[100px]  text-center overflow-hidden">
+               <h1 class="heading text-8xl font-[gilroy]">Earth</h1>
+               <h1 class="heading text-8xl font-[gilroy]">Csilla</h1>
+               <h1 class="heading text-8xl font-[gilroy]">Volcanic</h1>
+               <h1 class="heading text-8xl font-[gilroy]">Venus</h1>
+            </div>
+
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <!-- THE CORRECTED FADED LINE -->
+            <div class="faded-line flex items-center justify-center z-10 w-full mt-6">
+               <div class="w-60 md:w-96 h-px rounded-full
+                    bg-gradient-to-r 
+                    from-transparent 
+                    via-white 
+                    to-transparent">
+                  <!-- 
+                        FIX: The inner div now has h-px (1 pixel height) to be visible.
+                        The gradient flows: Transparent (start) -> White (middle) -> Transparent (end).
+                    -->
+               </div>
+            </div>
+         </div>
+         <canvas class="world  absolute inset-0 z-1"></canvas>
+      </div>
+
+   </div>
+
+   <script type="module" src="main.js"></script>
+   <script type="module" src="script.js"></script>
+</body>
+
+</html>
